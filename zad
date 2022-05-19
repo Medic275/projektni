@@ -1,0 +1,132 @@
+MAIN.C
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "header.h"
+int main() {
+    
+izbornik();
+	return 0;
+}
+	
+
+IZBORNIK.C
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "header.h"
+void izbornik() {
+int uvijet = 0;
+do{
+	printf("=================\n");
+	printf("Odaberite jednu od ponudenih opcija:");
+	printf("=================\n");
+
+	printf("\t\t\tOpcija 1: Pretraga komponenti \n");
+	printf("\t\t\tOpcija 2: Slaganje PC-a\n");
+	printf("\t\t\tOpcija 3: Izlaz\n");
+
+
+	printf("====================================================================================\n");
+	
+	scanf("%d", &uvijet);
+	
+		switch (uvijet) {
+	case 1:
+	   pretraga();
+		break;
+		
+	case 2:
+	    printf("b");
+	    break;
+		
+		 case 3:
+    {
+        exit(EXIT_SUCCESS);
+        break;
+    }
+
+		
+	default: {
+	printf("Ponovite unos\n");
+	}
+		}}
+		while(1);
+}
+
+void pretraga(){
+    int i = 0;
+    do{
+    printf("=====Odabir komponenti=====\n");
+    
+    printf("\t\t\tOpcija 1: Procesori (CPU) \n");
+	printf("\t\t\tOpcija 2: Graficke kartice (GPU)\n");
+	printf("\t\t\tOpcija 3: Maticne ploce \n");
+	printf("\t\t\tOpcija 4: Memorija\n");
+	printf("\t\t\tOpcija 5: RAM memorija\n");
+	printf("\t\t\tOpcija 6: Napajanje\n");
+	printf("\t\t\tOpcija 7: Hladnjaci\n");
+	printf("\t\t\tOpcija 8: Kuciste\n");
+	printf("\t\t\tOpcija 0: Povratak na glavni izbornik\n");
+	scanf("%d", &i);
+    		switch (i) {
+	case 1:
+	  printf("b");
+		break;
+			case 2:
+	  printf("b");
+		break;
+			case 3:
+	  printf("b");
+		break;
+		
+		
+	case 4:
+	    printf("b");
+	    break;
+
+		
+	case 5:
+	    printf("b");
+	    break;	
+	
+		
+	case 6:
+	    printf("b");
+	    break;
+	 
+		
+	case 7:
+	    printf("b");
+	    break;
+
+	
+		
+	case 8:
+	    printf("b");
+	    break;
+		
+		 case 0:
+    {
+        izbornik();
+        break;
+    }
+
+		
+	default: {
+	printf("Ponovite unos\n");
+	}
+		}}
+		while(1);
+}
+
+HEADER.H
+
+#ifndef HEADER_H
+#define HEADER_H
+
+void pretraga();
+void izbornik();
+
+
+#endif //DATATYPE_H
